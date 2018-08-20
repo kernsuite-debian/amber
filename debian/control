@@ -1,0 +1,26 @@
+Source: amber
+Section: science
+Priority: extra
+Maintainer: KERN packaging <packaging@kernsuite.info>
+Build-Depends: cmake,
+ debhelper (>=9),
+ libisautils,
+ nvidia-cuda-toolkit,
+ libisaopencl,
+ libhdf5-dev, 
+ astrodata,
+ opencl-clhpp-headers,
+ opencl-c-headers,
+ psrdada,
+ dedispersion,
+ integration,
+ snr
+Standards-Version: 3.9.8
+Homepage: https://github.com/AA-ALERT/AMBER
+
+Package: amber
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: A many-core transient searching pipeline
+ designed mainly to search in real-time for Fast Radio Bursts.
